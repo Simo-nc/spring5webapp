@@ -16,9 +16,7 @@ public class Publisher {
     private String address;
 
 
-    @OneToOne
-    @JoinTable(name = "publisher_book", joinColumns = @JoinColumn(name = "publisher_id"),
-    inverseJoinColumns = @JoinColumn(name = "book_id"))
+
     //private Set<Author> authors = new HashSet<>();
 
     public Publisher() {
