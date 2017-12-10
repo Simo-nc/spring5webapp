@@ -15,9 +15,7 @@ public class Publisher {
     private String name;
     private String address;
 
-
-
-    //private Set<Author> authors = new HashSet<>();
+    private Set<Book> books = new HashSet<>();
 
     public Publisher() {
     }
@@ -27,12 +25,11 @@ public class Publisher {
         this.address = address;
     }
 
-    /* public Book(String title, String isbn, String publisher, Set<Author> authors) {
-        this.title = title;
-        this.isbn = isbn;
-        this.publisher = publisher;
-        this.authors = authors;
-    } */
+    public Publisher(String name, String address, Set<Book> books) {
+        this.name = name;
+        this.address = address;
+        this.books = books;
+    }
 
     public Long getId() {
         return id;
@@ -54,7 +51,19 @@ public class Publisher {
         return address;
     }
 
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
+    }
+
     public void setAddress(String address) {
         this.address = address;
+
+
+
+
     }
 }
